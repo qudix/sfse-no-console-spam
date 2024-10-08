@@ -6,7 +6,7 @@ includes("lib/commonlibsf")
 
 -- set project
 set_project("sfse-no-console-spam")
-set_version("0.0.0")
+set_version("0.1.0")
 set_license("GPL-3.0")
 
 -- set defaults
