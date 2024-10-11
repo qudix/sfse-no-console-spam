@@ -24,5 +24,5 @@ SFSEPluginLoad(const SFSE::LoadInterface* a_sfse)
 
     Hook_TESConditionItem_IsTrue::Install();
 
-	return true;
+    return true;
 }
