@@ -1,12 +1,11 @@
 struct Hook_TESConditionItem_IsTrue
 {
-    static void* Unk(void* a_arg1, void* a_arg2)
+    static RE::ConditionCheckParams& Unk(RE::ConditionCheckParams& a_paramsA, RE::ConditionCheckParams& a_paramsB)
     {
-        auto tls = *(std::uintptr_t*)REX::W32::NtCurrentTeb()->threadLocalStoragePointer;
-        auto doConsoleLog = (bool*)(tls + 464);
-        *doConsoleLog = false;
+        auto tls = RE::TLS::GetSingleton();
+        tls->logConditionFunctions = false;
 
-        return _Unk(a_arg1, a_arg2);
+        return _Unk(a_paramsA, a_paramsB);
     }
 
     static inline REL::Relocation<decltype(Unk)> _Unk;
