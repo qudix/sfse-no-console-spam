@@ -1,12 +1,12 @@
 -- set minimum xmake version
-set_xmakever("2.8.2")
+set_xmakever("2.9.0")
 
 -- includes
 includes("lib/commonlibsf")
 
 -- set project
 set_project("sfse-no-console-spam")
-set_version("0.1.0")
+set_version("0.2.0")
 set_license("GPL-3.0")
 
 -- set defaults
